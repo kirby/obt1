@@ -18,6 +18,8 @@ class WorldView: UIView {
     
     var timeColor = UIColor(white: 1.0, alpha: 0.25)
     
+    var soundManager = SoundManager()
+    
     var worldSizeX = 1
     var worldSizeY = 2
     
@@ -233,6 +235,7 @@ class WorldView: UIView {
     
     override func touchesBegan(touches: NSSet, withEvent event: UIEvent) {
         if let touch = touches.anyObject() as? UITouch {
+            soundManager.playRandomKeylickSound()
             var point = touch.locationInView(self)
             self.performAction(point)
             self.setNeedsDisplay()

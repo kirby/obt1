@@ -14,6 +14,13 @@
 		4E04E8A219D7CCBF00E0F0FD /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4E04E8A119D7CCBF00E0F0FD /* Images.xcassets */; };
 		4E04E8A519D7CCBF00E0F0FD /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4E04E8A319D7CCBF00E0F0FD /* LaunchScreen.xib */; };
 		4E04E8B119D7CCBF00E0F0FD /* obt1Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E04E8B019D7CCBF00E0F0FD /* obt1Tests.swift */; };
+		4E2C77EB19D90A1D00D8989E /* SoundManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E2C77EA19D90A1D00D8989E /* SoundManager.swift */; };
+		4E2C77F219D90AFD00D8989E /* keyclick1.wav in Resources */ = {isa = PBXBuildFile; fileRef = 4E2C77ED19D90AFD00D8989E /* keyclick1.wav */; };
+		4E2C77F319D90AFD00D8989E /* keyclick2.wav in Resources */ = {isa = PBXBuildFile; fileRef = 4E2C77EE19D90AFD00D8989E /* keyclick2.wav */; };
+		4E2C77F419D90AFD00D8989E /* keyclick3.wav in Resources */ = {isa = PBXBuildFile; fileRef = 4E2C77EF19D90AFD00D8989E /* keyclick3.wav */; };
+		4E2C77F519D90AFD00D8989E /* keyclick4.wav in Resources */ = {isa = PBXBuildFile; fileRef = 4E2C77F019D90AFD00D8989E /* keyclick4.wav */; };
+		4E2C77F619D90AFD00D8989E /* keyclick5.wav in Resources */ = {isa = PBXBuildFile; fileRef = 4E2C77F119D90AFD00D8989E /* keyclick5.wav */; };
+		4E2C77F819D90D1C00D8989E /* 221560__alaskarobotics__laser-shot.wav in Resources */ = {isa = PBXBuildFile; fileRef = 4E2C77F719D90D1C00D8989E /* 221560__alaskarobotics__laser-shot.wav */; };
 		4E9CA54D19D853A1000CF70B /* WorldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E9CA54C19D853A0000CF70B /* WorldView.swift */; };
 		4E9CA54F19D8B11D000CF70B /* Cell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E9CA54E19D8B11D000CF70B /* Cell.swift */; };
 /* End PBXBuildFile section */
@@ -40,6 +47,13 @@
 		4E04E8AA19D7CCBF00E0F0FD /* obt1Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = obt1Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4E04E8AF19D7CCBF00E0F0FD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4E04E8B019D7CCBF00E0F0FD /* obt1Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = obt1Tests.swift; sourceTree = "<group>"; };
+		4E2C77EA19D90A1D00D8989E /* SoundManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SoundManager.swift; sourceTree = "<group>"; };
+		4E2C77ED19D90AFD00D8989E /* keyclick1.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = keyclick1.wav; sourceTree = "<group>"; };
+		4E2C77EE19D90AFD00D8989E /* keyclick2.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = keyclick2.wav; sourceTree = "<group>"; };
+		4E2C77EF19D90AFD00D8989E /* keyclick3.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = keyclick3.wav; sourceTree = "<group>"; };
+		4E2C77F019D90AFD00D8989E /* keyclick4.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = keyclick4.wav; sourceTree = "<group>"; };
+		4E2C77F119D90AFD00D8989E /* keyclick5.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = keyclick5.wav; sourceTree = "<group>"; };
+		4E2C77F719D90D1C00D8989E /* 221560__alaskarobotics__laser-shot.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "221560__alaskarobotics__laser-shot.wav"; sourceTree = "<group>"; };
 		4E9CA54C19D853A0000CF70B /* WorldView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WorldView.swift; sourceTree = "<group>"; };
 		4E9CA54E19D8B11D000CF70B /* Cell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Cell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -92,6 +106,7 @@
 				4E04E8A319D7CCBF00E0F0FD /* LaunchScreen.xib */,
 				4E04E89919D7CCBF00E0F0FD /* obt1.xcdatamodeld */,
 				4E04E89519D7CCBF00E0F0FD /* Supporting Files */,
+				4E2C77EA19D90A1D00D8989E /* SoundManager.swift */,
 			);
 			path = obt1;
 			sourceTree = "<group>";
@@ -99,6 +114,7 @@
 		4E04E89519D7CCBF00E0F0FD /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				4E2C77EC19D90AFD00D8989E /* sounds */,
 				4E04E89619D7CCBF00E0F0FD /* Info.plist */,
 			);
 			name = "Supporting Files";
@@ -119,6 +135,19 @@
 				4E04E8AF19D7CCBF00E0F0FD /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		4E2C77EC19D90AFD00D8989E /* sounds */ = {
+			isa = PBXGroup;
+			children = (
+				4E2C77F719D90D1C00D8989E /* 221560__alaskarobotics__laser-shot.wav */,
+				4E2C77ED19D90AFD00D8989E /* keyclick1.wav */,
+				4E2C77EE19D90AFD00D8989E /* keyclick2.wav */,
+				4E2C77EF19D90AFD00D8989E /* keyclick3.wav */,
+				4E2C77F019D90AFD00D8989E /* keyclick4.wav */,
+				4E2C77F119D90AFD00D8989E /* keyclick5.wav */,
+			);
+			path = sounds;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -201,9 +230,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4E2C77F519D90AFD00D8989E /* keyclick4.wav in Resources */,
 				4E04E8A019D7CCBF00E0F0FD /* Main.storyboard in Resources */,
+				4E2C77F819D90D1C00D8989E /* 221560__alaskarobotics__laser-shot.wav in Resources */,
+				4E2C77F219D90AFD00D8989E /* keyclick1.wav in Resources */,
 				4E04E8A519D7CCBF00E0F0FD /* LaunchScreen.xib in Resources */,
 				4E04E8A219D7CCBF00E0F0FD /* Images.xcassets in Resources */,
+				4E2C77F619D90AFD00D8989E /* keyclick5.wav in Resources */,
+				4E2C77F319D90AFD00D8989E /* keyclick2.wav in Resources */,
+				4E2C77F419D90AFD00D8989E /* keyclick3.wav in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -226,6 +261,7 @@
 				4E9CA54F19D8B11D000CF70B /* Cell.swift in Sources */,
 				4E04E89819D7CCBF00E0F0FD /* AppDelegate.swift in Sources */,
 				4E04E89B19D7CCBF00E0F0FD /* obt1.xcdatamodeld in Sources */,
+				4E2C77EB19D90A1D00D8989E /* SoundManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
