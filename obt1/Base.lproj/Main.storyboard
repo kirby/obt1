@@ -53,6 +53,16 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="score" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nft-Jp-HP1">
+                                <rect key="frame" x="470" y="28" width="60" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="60" id="h4V-fK-9tO"/>
+                                    <constraint firstAttribute="height" constant="21" id="hcT-oV-U27"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
@@ -61,17 +71,20 @@
                             <constraint firstItem="FTF-kH-IFx" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" symbolic="YES" id="IHj-Ya-mIZ"/>
                             <constraint firstAttribute="trailingMargin" secondItem="Tyr-oe-dgM" secondAttribute="trailing" constant="-16" id="RhS-Xo-Bdk"/>
                             <constraint firstAttribute="trailing" secondItem="FTF-kH-IFx" secondAttribute="trailing" constant="20" symbolic="YES" id="ajp-zO-q0O"/>
+                            <constraint firstItem="FTF-kH-IFx" firstAttribute="leading" secondItem="Nft-Jp-HP1" secondAttribute="trailing" constant="8" id="dtr-Uk-My4"/>
                             <constraint firstItem="tsM-Ru-kxb" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="eAZ-WP-ROG"/>
                             <constraint firstItem="tsM-Ru-kxb" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="ebG-n7-ZtE"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="42Q-uZ-Fb0" secondAttribute="bottom" id="er9-yM-e9s"/>
                             <constraint firstItem="Tyr-oe-dgM" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-16" id="r7G-TE-eO2"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Tyr-oe-dgM" secondAttribute="bottom" constant="8" id="vVy-Gt-FGI"/>
+                            <constraint firstItem="Nft-Jp-HP1" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="wfX-aQ-IIA"/>
                             <constraint firstAttribute="trailing" secondItem="42Q-uZ-Fb0" secondAttribute="trailing" id="yev-dH-8l4"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="cellCountLabel" destination="tsM-Ru-kxb" id="JTk-eL-QR6"/>
                         <outlet property="locationLabel" destination="FTF-kH-IFx" id="rG7-f0-DQ4"/>
+                        <outlet property="scoreLabel" destination="Nft-Jp-HP1" id="pVU-Cp-eMX"/>
                         <outlet property="tabBar" destination="42Q-uZ-Fb0" id="WWv-DD-b6k"/>
                         <outlet property="worldView" destination="Tyr-oe-dgM" id="HsT-0e-Xpo"/>
                     </connections>

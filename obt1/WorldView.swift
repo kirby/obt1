@@ -11,6 +11,7 @@ import UIKit
 protocol WorldViewDelegate {
     func currentLocation(location : String)
     func cellCount(count : String)
+    func score(score : String)
 }
 
 class WorldView: UIView {
@@ -62,6 +63,12 @@ class WorldView: UIView {
             for y in 0..<self.worldSizeY {
                 self.addRandomCell(x, y: y)
             }
+        }
+        
+        if (self.delegate != nil) {
+            self.delegate.cellCount("2")
+            self.delegate.currentLocation("-")
+            self.delegate.score("\(self.getScore())")
         }
         
         self.setNeedsDisplay()
@@ -147,8 +154,6 @@ class WorldView: UIView {
         self.currX = Int(floor(point.x / xd))
         self.currY = Int(floor(point.y / yd))
         
-//        println("\(point) -> \(self.currX),\(self.currY)")
-        
         var selectedCell = cells["\(self.currX),\(self.currY)"]
         
         switch selectedCell!.action! {
@@ -209,6 +214,19 @@ class WorldView: UIView {
         
         self.delegate.currentLocation("\(self.currX),\(self.currY)")
         self.delegate.cellCount("\(self.worldSizeX * self.worldSizeY)")
+        self.delegate.score("\(self.getScore())")
+    }
+    
+    func getScore() -> Int {
+        var score = 0
+        
+        for x in 0..<self.worldSizeX {
+            for y in 0..<self.worldSizeY {
+                score += self.cells["\(x),\(y)"]!.points
+            }
+        }
+        
+        return score
     }
 
     // MARK: - UIResponder

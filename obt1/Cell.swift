@@ -22,6 +22,15 @@ let ACTION_COLORS = [
     Action.Blackhole : UIColor.blackColor().CGColor
 ]
 
+let ACTION_POINTS = [
+    Action.XPlus : 1,
+    Action.YPlus : 1,
+    Action.XYPlus : 2,
+    Action.Reset : 0,
+    Action.Mutate : 5,
+    Action.Blackhole : -10
+]
+
 enum Action: Int {
     
     case XPlus = 0
@@ -57,20 +66,19 @@ class Cell {
     var y : Int!
     var action : Action!
     
-    var color : CGColorRef! // derived from action
+    var color  : CGColorRef! // derived from action
+    var points : Int!
     
     init (x : Int, y: Int, action : Action) {
         self.x = x
         self.y = y
         self.setAction(action)
-//        self.action = action
-//        
-//        self.color = ACTION_COLORS[action]
     }
     
     func setAction(action : Action) {
         self.action = action
         self.color = ACTION_COLORS[action]
+        self.points = ACTION_POINTS[action]
     }
     
 }

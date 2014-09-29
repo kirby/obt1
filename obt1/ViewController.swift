@@ -14,6 +14,7 @@ class ViewController: UIViewController, UITabBarDelegate, WorldViewDelegate {
     @IBOutlet weak var worldView: WorldView!
     @IBOutlet weak var locationLabel: UILabel!
     @IBOutlet weak var cellCountLabel: UILabel!
+    @IBOutlet weak var scoreLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,7 +31,6 @@ class ViewController: UIViewController, UITabBarDelegate, WorldViewDelegate {
     func tabBar(tabBar: UITabBar, didSelectItem item: UITabBarItem!) {
         
         if let item = tabBar.selectedItem {
-            println(item.tag)
             if (item.tag == 0) {
                 self.worldView.createRandomWorld()
             }
@@ -46,6 +46,10 @@ class ViewController: UIViewController, UITabBarDelegate, WorldViewDelegate {
     
     func cellCount(count: String) {
         self.cellCountLabel.text = "There are \(count) cells"
+    }
+    
+    func score(score: String) {
+        self.scoreLabel.text = score
     }
 
 }
