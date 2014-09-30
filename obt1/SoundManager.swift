@@ -24,8 +24,7 @@ class SoundManager {
     
     func setupKeyClickSounds() -> [AVAudioPlayer] {
         let soundFiles = [
-//            "keyclick1", "keyclick2", "keyclick3", "keyclick4", "keyclick5"
-            "221560__alaskarobotics__laser-shot"
+            "keyclick1", "keyclick2", "keyclick3", "keyclick4", "keyclick5", "221560__alaskarobotics__laser-shot"
         ]
         
         var avPlayers = [AVAudioPlayer]()

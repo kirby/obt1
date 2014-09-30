@@ -12,6 +12,8 @@ protocol WorldViewDelegate {
     func currentLocation(location : String)
     func cellCount(count : String)
     func score(score : String)
+    func gameOver(score : String)
+    func movesLeft(touchesLeft : String)
 }
 
 class WorldView: UIView {
@@ -23,11 +25,12 @@ class WorldView: UIView {
     var worldSizeX = 1
     var worldSizeY = 2
     
-    var numberOfCells = 1
+    var numberOfCells = 2
     var currX = 0
     var currY = 0
     
     var generation = 0
+    var numberOfTouches = 0
     
     var nextCellSplitDate : NSDate!
     
@@ -35,9 +38,11 @@ class WorldView: UIView {
     
     var cells = Dictionary<String, Cell>()       // index (x,y) -> cell
     
+    var alertController : UIAlertController!
+    
     required init(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
-        
+
         self.setColorBasedOnTimeOfDay()
         self.backgroundColor = self.timeColor
 
@@ -58,6 +63,9 @@ class WorldView: UIView {
         
         self.worldSizeX = 1
         self.worldSizeY = 2
+        
+        self.numberOfCells = 2
+        self.numberOfTouches = 0
         
         self.cells = Dictionary<String, Cell>()
         
@@ -147,6 +155,15 @@ class WorldView: UIView {
     }
     
     func performAction(point : CGPoint) {
+        
+        self.numberOfTouches++
+        
+        self.delegate.movesLeft("\(10 - self.numberOfTouches)")
+        
+        if self.numberOfTouches == 10 {
+            self.delegate.gameOver("\(self.getScore())")
+        }
+        
         let h = Int(self.frame.height)
         let w = Int(self.frame.width)
         

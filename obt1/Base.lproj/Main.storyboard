@@ -18,14 +18,12 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cell Count" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tsM-Ru-kxb">
-                                <rect key="frame" x="16" y="20" width="140" height="21"/>
+                                <rect key="frame" x="16" y="20" width="80" height="21"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="140" id="DHP-nc-ZEx"/>
-                                    <constraint firstAttribute="width" constant="140" id="WZy-6B-KWG"/>
+                                    <constraint firstAttribute="width" constant="80" id="WZy-6B-KWG"/>
                                     <constraint firstAttribute="height" constant="21" id="YJb-z8-4Rl"/>
-                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="21" id="oPd-dP-2fu"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -43,21 +41,21 @@
                                     <tabBarItem tag="1" title="Spy" image="spy32" id="2bG-5s-O7X"/>
                                 </items>
                             </tabBar>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0,0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FTF-kH-IFx">
-                                <rect key="frame" x="538" y="28" width="42" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="score" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nft-Jp-HP1">
+                                <rect key="frame" x="524" y="20" width="60" height="21"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="42" id="9kG-1n-NSE"/>
-                                    <constraint firstAttribute="height" constant="21" id="ndE-Pn-0So"/>
+                                    <constraint firstAttribute="width" constant="60" id="eqZ-VC-Ruf"/>
+                                    <constraint firstAttribute="height" constant="21" id="hcT-oV-U27"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="score" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nft-Jp-HP1">
-                                <rect key="frame" x="470" y="28" width="60" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10 Moves Left" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qwD-A2-Bmu">
+                                <rect key="frame" x="238" y="21" width="125" height="21"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="60" id="h4V-fK-9tO"/>
-                                    <constraint firstAttribute="height" constant="21" id="hcT-oV-U27"/>
+                                    <constraint firstAttribute="width" constant="125" id="1Pa-sA-5jg"/>
+                                    <constraint firstAttribute="height" constant="21" id="mpF-qL-byi"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -67,23 +65,23 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="Tyr-oe-dgM" firstAttribute="top" secondItem="tsM-Ru-kxb" secondAttribute="bottom" constant="8" id="3XB-AX-G2R"/>
+                            <constraint firstItem="tsM-Ru-kxb" firstAttribute="baseline" secondItem="Nft-Jp-HP1" secondAttribute="baseline" id="8ct-kK-Pdh"/>
                             <constraint firstItem="42Q-uZ-Fb0" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="GXh-bT-Pzy"/>
-                            <constraint firstItem="FTF-kH-IFx" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" symbolic="YES" id="IHj-Ya-mIZ"/>
+                            <constraint firstItem="qwD-A2-Bmu" firstAttribute="baseline" secondItem="tsM-Ru-kxb" secondAttribute="baseline" id="HQN-X0-ezU"/>
+                            <constraint firstItem="Nft-Jp-HP1" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="Jrh-1l-f7U"/>
                             <constraint firstAttribute="trailingMargin" secondItem="Tyr-oe-dgM" secondAttribute="trailing" constant="-16" id="RhS-Xo-Bdk"/>
-                            <constraint firstAttribute="trailing" secondItem="FTF-kH-IFx" secondAttribute="trailing" constant="20" symbolic="YES" id="ajp-zO-q0O"/>
-                            <constraint firstItem="FTF-kH-IFx" firstAttribute="leading" secondItem="Nft-Jp-HP1" secondAttribute="trailing" constant="8" id="dtr-Uk-My4"/>
+                            <constraint firstAttribute="centerX" secondItem="qwD-A2-Bmu" secondAttribute="centerX" id="SMZ-xn-hTw"/>
                             <constraint firstItem="tsM-Ru-kxb" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="eAZ-WP-ROG"/>
                             <constraint firstItem="tsM-Ru-kxb" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="ebG-n7-ZtE"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="42Q-uZ-Fb0" secondAttribute="bottom" id="er9-yM-e9s"/>
                             <constraint firstItem="Tyr-oe-dgM" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-16" id="r7G-TE-eO2"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Tyr-oe-dgM" secondAttribute="bottom" constant="8" id="vVy-Gt-FGI"/>
-                            <constraint firstItem="Nft-Jp-HP1" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="wfX-aQ-IIA"/>
                             <constraint firstAttribute="trailing" secondItem="42Q-uZ-Fb0" secondAttribute="trailing" id="yev-dH-8l4"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="cellCountLabel" destination="tsM-Ru-kxb" id="JTk-eL-QR6"/>
-                        <outlet property="locationLabel" destination="FTF-kH-IFx" id="rG7-f0-DQ4"/>
+                        <outlet property="movesLeftLabel" destination="qwD-A2-Bmu" id="nAL-V0-JJ5"/>
                         <outlet property="scoreLabel" destination="Nft-Jp-HP1" id="pVU-Cp-eMX"/>
                         <outlet property="tabBar" destination="42Q-uZ-Fb0" id="WWv-DD-b6k"/>
                         <outlet property="worldView" destination="Tyr-oe-dgM" id="HsT-0e-Xpo"/>
