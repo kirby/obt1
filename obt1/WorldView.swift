@@ -163,6 +163,7 @@ class WorldView: UIView {
         
         if self.numberOfTouches == 10 {
             self.delegate.gameOver("\(self.getScore())")
+            return
         }
         
         let h = Int(self.frame.height)
@@ -243,7 +244,7 @@ class WorldView: UIView {
                 score += self.cells["\(x),\(y)"]!.points
             }
         }
-        
+        println("\(score)")
         return score
     }
 

@@ -54,6 +54,7 @@ class ViewController: UIViewController, UITabBarDelegate, WorldViewDelegate {
     }
     
     func gameOver(score: String) {
+        self.scoreLabel.text = score
         self.alertController.message = "Your score was \(score)!"
         self.presentViewController(alertController, animated: true, completion: nil)
     }

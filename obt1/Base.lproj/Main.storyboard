@@ -4,10 +4,10 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6243"/>
     </dependencies>
     <scenes>
-        <!--One Brick Today-->
+        <!--10 Cells-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController title="One Brick Today" id="BYZ-38-t0r" customClass="ViewController" customModule="obt1" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="10 Cells" id="BYZ-38-t0r" customClass="ViewController" customModule="obt1" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -17,7 +17,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Tyr-oe-dgM" customClass="WorldView" customModule="obt1" customModuleProvider="target">
-                                <rect key="frame" x="20" y="57" width="560" height="494"/>
+                                <rect key="frame" x="0.0" y="57" width="600" height="494"/>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="score" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nft-Jp-HP1">
                                 <rect key="frame" x="520" y="28" width="60" height="21"/>
@@ -50,18 +50,18 @@
                                 </items>
                             </tabBar>
                         </subviews>
-                        <color key="backgroundColor" red="0.80000001190000003" green="1" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstAttribute="trailing" secondItem="Tyr-oe-dgM" secondAttribute="trailing" id="6bQ-ad-eLN"/>
                             <constraint firstAttribute="trailing" secondItem="Nft-Jp-HP1" secondAttribute="trailing" constant="20" symbolic="YES" id="AOw-XF-yfZ"/>
-                            <constraint firstItem="Tyr-oe-dgM" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" symbolic="YES" id="CnC-nn-qm4"/>
                             <constraint firstItem="42Q-uZ-Fb0" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="GXh-bT-Pzy"/>
                             <constraint firstItem="qwD-A2-Bmu" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" symbolic="YES" id="Jq1-Wr-aKr"/>
                             <constraint firstItem="Nft-Jp-HP1" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" symbolic="YES" id="MOp-8M-c0U"/>
-                            <constraint firstItem="Tyr-oe-dgM" firstAttribute="top" secondItem="qwD-A2-Bmu" secondAttribute="bottom" constant="8" id="Uac-gr-XBv"/>
-                            <constraint firstItem="42Q-uZ-Fb0" firstAttribute="top" secondItem="Tyr-oe-dgM" secondAttribute="bottom" symbolic="YES" id="X0o-Q5-4Mv"/>
+                            <constraint firstItem="42Q-uZ-Fb0" firstAttribute="top" secondItem="Tyr-oe-dgM" secondAttribute="bottom" id="Tnn-aQ-NG3"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="42Q-uZ-Fb0" secondAttribute="bottom" id="er9-yM-e9s"/>
                             <constraint firstItem="qwD-A2-Bmu" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" symbolic="YES" id="jeD-PW-rDR"/>
-                            <constraint firstAttribute="trailing" secondItem="Tyr-oe-dgM" secondAttribute="trailing" constant="20" symbolic="YES" id="kwH-i1-9zu"/>
+                            <constraint firstItem="Tyr-oe-dgM" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="pie-1u-HMy"/>
+                            <constraint firstItem="Tyr-oe-dgM" firstAttribute="top" secondItem="qwD-A2-Bmu" secondAttribute="bottom" constant="8" id="rlv-uE-WiR"/>
                             <constraint firstItem="qwD-A2-Bmu" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="s6l-O4-96Y"/>
                             <constraint firstAttribute="trailing" secondItem="42Q-uZ-Fb0" secondAttribute="trailing" id="yev-dH-8l4"/>
                         </constraints>
