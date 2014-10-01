@@ -9,8 +9,6 @@
 import UIKit
 
 protocol WorldViewDelegate {
-    func currentLocation(location : String)
-    func cellCount(count : String)
     func score(score : String)
     func gameOver(score : String)
     func movesLeft(touchesLeft : String)
@@ -76,8 +74,7 @@ class WorldView: UIView {
         }
         
         if (self.delegate != nil) {
-            self.delegate.cellCount("2")
-            self.delegate.currentLocation("-")
+            self.delegate.movesLeft("10")
             self.delegate.score("\(self.getScore())")
         }
         
@@ -93,13 +90,17 @@ class WorldView: UIView {
     
     func generateRandomCell(point : CGPoint) -> Cell {
         var action = Int(arc4random_uniform(UInt32(ACTION_COLORS.count)))
-        while (Action.fromRaw(action) == Action.Blackhole) {
+        
+        var i : Int = 0
+        var a = Action(rawValue: action) == Action.Blackhole
+        
+        while (Action(rawValue: action) == Action.Blackhole) {
             action = Int(arc4random_uniform(UInt32(ACTION_COLORS.count)))
         }
         return Cell(
             x: Int(point.x),
             y: Int(point.y),
-            action: Action.fromRaw(action)!)
+            action: Action(rawValue: action)!)
     }
     
     func drawBackgroundOnContext(context: CGContext, cell : Cell) {
@@ -149,7 +150,7 @@ class WorldView: UIView {
         
         let dateFormatter = NSDateFormatter()
         dateFormatter.setLocalizedDateFormatFromTemplate("%HH")
-        let hour = NSString(string: dateFormatter.stringFromDate(date)).integerValue
+        let hour = NSString(string: dateFormatter.stringFromDate(date)).floatValue
         let shade = CGFloat(hour / 24.0)
         self.timeColor = UIColor(white: shade, alpha: 1.0)
     }
@@ -231,8 +232,6 @@ class WorldView: UIView {
             
         }
         
-        self.delegate.currentLocation("\(self.currX),\(self.currY)")
-        self.delegate.cellCount("\(self.worldSizeX * self.worldSizeY)")
         self.delegate.score("\(self.getScore())")
     }
     

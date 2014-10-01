@@ -49,14 +49,6 @@ class ViewController: UIViewController, UITabBarDelegate, WorldViewDelegate {
     
     // MARK: WorldViewDelegate
     
-    func currentLocation(location : String) {
-        // do nothing
-    }
-    
-    func cellCount(count: String) {
-        self.cellCountLabel.text = "There are \(count) cells"
-    }
-    
     func score(score: String) {
         self.scoreLabel.text = score
     }

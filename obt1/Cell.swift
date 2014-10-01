@@ -55,7 +55,7 @@ enum Action: Int {
         case .Blackhole:
             return "blackhole"
         default:
-            return String(self.toRaw())
+            return String(self.rawValue)
         }
     }
 }
